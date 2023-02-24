@@ -1,5 +1,5 @@
 # Vue3 Horizontal Collapse
-```npm install -S vue3horizontalcollapse```
+```npm install -S horizontalcollapse```
 ### Main component requires few props
 * Items (required)
     + title: **String | required** => _shown when inactive_
