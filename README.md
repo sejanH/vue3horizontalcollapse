@@ -1,5 +1,5 @@
 # Vue3 Horizontal Collapse
-```npm install -S horizontalcollapse```
+```npm install -S vue3horizontalcollapse```
 ### Main component requires few props
 * Items (required)
     + title: **String | required** => _shown when inactive_
@@ -10,14 +10,19 @@
             - el: **String | required** => _href or router-link_
             - url: **String | required** => _target url_
             - text: **String | required** => _link text_
+
 * defaultHeight: **String | optional** => _default: ```16rem```_
+
 * activeIndex: **String/Boolean | optional** => _set active tab for first load, default: ```false```_ 
+
 * itemSpan: **Number | optional** => _span active tab for ```itemSpan``` count, default: ```0```_
+
 * itemMinWidth: **String | optional** => _inactive tab width, default: ```10rem```_
+
 * itemMaxWidth: **String | optional** => _container width, default: ```100%```_
 
 ### Example
-![preview](./previewimage.gif)
+![preview](https://github.com/sejanH/vue3horizontalcollapse/raw/main/previewimage.gif)
 ```
 
 <script setup>
