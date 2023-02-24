@@ -17,7 +17,7 @@
 * itemMaxWidth: **String | optional** => _container width, default: ```100%```_
 
 ### Example
-![This is an image](/public/previewimage.gif)
+![preview](./previewimage.gif)
 ```
 
 <script setup>
