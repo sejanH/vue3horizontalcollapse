@@ -26,7 +26,7 @@
   ],
   "main": "./dist/horizontalcollapse.umd.cjs",
   "module": "./dist/horizontalcollapse.js",
-  "types": "./lib/modules.d.ts",
+  "types": "./modules.d.ts",
   "exports": {
     ".": {
       "import": "./dist/horizontalcollapse.js",
@@ -34,6 +34,7 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "license": "GNU GENERAL PUBLIC LICENSE",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
