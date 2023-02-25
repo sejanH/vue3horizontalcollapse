@@ -24,13 +24,13 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/horizontalcollapse.umd.cjs",
-  "module": "./dist/horizontalcollapse.js",
-  "types": "./modules.d.ts",
+  "main": "./dist/vue3horizontalcollapse.umd.cjs",
+  "module": "./dist/vue3horizontalcollapse.js",
+  "types": "./dist/modules.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/horizontalcollapse.js",
-      "require": "./dist/horizontalcollapse.umd.js"
+      "import": "./dist/vue3horizontalcollapse.js",
+      "require": "./dist/vue3horizontalcollapse.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -53,6 +53,7 @@
     "sass": "^1.58.3",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
+    "vite-plugin-static-copy": "^0.13.0",
     "vue-tsc": "^1.0.24"
   }
 }
