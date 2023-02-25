@@ -1,3 +1,6 @@
-declare module 'vue3horizontalcollase'{
-    export default function vue3horizontalcollase():void
+export declare interface PluginOptions {
+    componentName: string
 }
+declare const vue3horizontalcollapse: PluginOptions
+
+export default vue3horizontalcollapse
