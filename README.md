@@ -26,8 +26,8 @@
 ```
 
 <script setup>
-import HorizontalCollapse from 'horizontalcollapse';
-import 'horizontalcollapse/dist/style.css'
+import HorizontalCollapse from 'vue3horizontalcollapse';
+import 'vue3horizontalcollapse/dist/style.css'
 defineProps({
   items: {
     default: [
