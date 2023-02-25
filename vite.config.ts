@@ -4,14 +4,16 @@ import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [vue(), viteStaticCopy({
+  plugins: [vue(),
+  viteStaticCopy({
     targets: [
       {
-        src: 'modules.d.ts',
+        src: 'env.d.ts',
         dest: './'
       }
     ]
-  })],
+  })
+  ],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points

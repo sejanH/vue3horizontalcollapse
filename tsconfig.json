@@ -30,7 +30,7 @@
     "lib/**/*.d.ts",
     "lib/**/*.tsx",
     "lib/**/*.vue",
-    "modules.d.ts"
+    "env.d.ts"
   ],
   "references": [
     {
