@@ -8,7 +8,7 @@
   ],
   "main": "./dist/horizontalcollapse.umd.cjs",
   "module": "./dist/horizontalcollapse.js",
-  "types": "./dist/main.d.ts",
+  "types": "./dist/modules.d.ts",
   "exports": {
     ".": {
       "import": "./dist/horizontalcollapse.js",
@@ -19,6 +19,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "type-check":"vue-tsc",
     "preview": "vite preview"
   },
   "dependencies": {
