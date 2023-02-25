@@ -1,6 +1,24 @@
 {
   "name": "vue3horizontalcollapse",
   "private": false,
+  "author": "Sejan <sejan840@gmail.com>",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sejanH/vue3horizontalcollapse.git"
+  },
+  "keywords": [
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "vue3",
+    "collapse",
+    "horizontalcollapse"
+  ],
   "version": "0.0.4",
   "type": "module",
   "files": [
@@ -8,7 +26,7 @@
   ],
   "main": "./dist/horizontalcollapse.umd.cjs",
   "module": "./dist/horizontalcollapse.js",
-  "types": "./dist/modules.d.ts",
+  "types": "./lib/modules.d.ts",
   "exports": {
     ".": {
       "import": "./dist/horizontalcollapse.js",
