@@ -1,6 +1,5 @@
 
 <script setup lang="ts">
-import ComponentItem from './ComponentItem.vue';
 import HorizontalCollapseItem from './Item.vue';
 defineProps({
     items: {
@@ -32,8 +31,7 @@ interface ItemType {
     title: string,
     bgColor?: string,
     bodyType: string,
-    body?: any,
-    template?:any
+    body?: any
 }
 
 export default {
@@ -46,12 +44,12 @@ export default {
             <HorizontalCollapseItem :bodyType="item.bodyType" :defaultHeight="defaultHeight" :itemSpan="itemSpan"
                 :itemMinWidth="itemMinWidth" :itemMaxWidth="itemMaxWidth" :activeDefault="index === activeIndex"
                 :style="`background-color:${item.bgColor}`" v-for="(item, index) in items" :key="index">
-                <template #header v-if="item.bodyType === 'json'">
+                <template #header>
                     <div class="horizontal-collapse__inactive-content">
                         <h3 class="horizontal-collapse__heading">{{ item.title }}</h3>
                     </div>
                 </template>
-                <template #content v-if="item.bodyType === 'json'">
+                <template #content>
                     <div class="horizontal-collapse__active-content" :style="`max-height:${defaultHeight}`">
                         <h3 class="horizontal-collapse__heading">{{ item.body.activeTitle }}</h3>
                         <p class="horizontal-collapse__body" v-html="item.body.description"></p>
@@ -61,9 +59,12 @@ export default {
                             item.body.link?.text }}</router-link>
                     </div>
                 </template>
-                <!-- <template> -->
-                        <component :is="item.template" v-if="item.bodyType !== 'json'"></component>
-                <!-- </template> -->
+                <template #component>
+                    <div class="horizontal-collapse__active-content" :style="`max-height:${defaultHeight}`">
+                        <h3 class="horizontal-collapse__heading">{{ item.body.activeTitle }}</h3>
+                        <p class="horizontal-collapse__body"><component :is="item.body.description"></component></p>
+                    </div>
+                </template>
             </HorizontalCollapseItem>
         </div>
     </section>

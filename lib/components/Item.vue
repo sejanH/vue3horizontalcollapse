@@ -54,9 +54,14 @@ export default {
         };min-width: ${itemMinWidth};max-width: ${itemMaxWidthComputed}`
         " class="horizontal-collapse__item" :class="{ 'is-active': isActive }" tabindex="0" role="button">
         <slot name="header"></slot>
-        <div :style="`height:${defaultHeight}`">
+        <div :style="`height:${defaultHeight}`" v-if="bodyType === 'json'">
             <Transition name="fade">
                 <slot name="content" v-if="isActive"></slot>
+            </Transition>
+        </div>
+        <div v-else>
+            <Transition name="fade">
+                <slot name="component" v-if="isActive"></slot>
             </Transition>
         </div>
     </div>

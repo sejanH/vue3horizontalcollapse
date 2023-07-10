@@ -4,8 +4,7 @@ interface ItemType {
   title: string,
   bgColor?: string,
   bodyType: string,
-  body?: any,
-  template?:any
+  body?: any
 }
 </script>
 <script setup lang="ts">
@@ -69,7 +68,10 @@ defineProps({
         title: "Delete",
         bgColor: '#8a8989',
         bodyType: "component",
-        template: HorizontalCollapseItemComponent
+        body: {
+          activeTitle: "Delete active",
+          description: HorizontalCollapseItemComponent
+        },
       }
     ]
   },
@@ -84,4 +86,5 @@ defineProps({
 <template>
   <HorizontalCollapseMain :items="items" :defaultHeight="defaultHeight" :activeIndex="activeIndex" :itemSpan="itemSpan"
     :itemMinWidth="itemMinWidth" :itemMaxWidth="itemMaxWidth">
-  </HorizontalCollapseMain></template>
+  </HorizontalCollapseMain>
+</template>
