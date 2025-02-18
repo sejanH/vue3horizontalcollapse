@@ -34,7 +34,7 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
-  "license": "GNU GENERAL PUBLIC LICENSE",
+  "license": "GNU",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
