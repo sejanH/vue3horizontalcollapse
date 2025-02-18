@@ -106,3 +106,7 @@ defineProps({
 
  - [Inspired from](https://codepen.io/adrianparr/pen/ywKRPg)  -- Idea and some css were taken
  - [Readme.so](https://readme.so/) -- to write this readme
+
+## For support
+
+ - Create a issue
