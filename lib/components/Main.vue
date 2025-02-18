@@ -27,20 +27,22 @@ defineProps({
 })
 </script>
 <script lang="ts">
-    interface ItemType {
-        title: string,
-        bgColor?: string,
-        body: any
-    }
-    export default{
-        name:'HorizontalCollapse'
-    }
+interface ItemType {
+    title: string,
+    bgColor?: string,
+    bodyType: string,
+    body?: any
+}
+
+export default {
+    name: 'HorizontalCollapse',
+}
 </script>
 <template>
     <section class="horizontal-collapse" :style="`min-height:${defaultHeight}`">
         <div class="horizontal-collapse__inner">
-            <HorizontalCollapseItem :defaultHeight="defaultHeight" :itemSpan="itemSpan" :itemMinWidth="itemMinWidth"
-                :itemMaxWidth="itemMaxWidth" :activeDefault="index === activeIndex"
+            <HorizontalCollapseItem :bodyType="item.bodyType" :defaultHeight="defaultHeight" :itemSpan="itemSpan"
+                :itemMinWidth="itemMinWidth" :itemMaxWidth="itemMaxWidth" :activeDefault="index === activeIndex"
                 :style="`background-color:${item.bgColor}`" v-for="(item, index) in items" :key="index">
                 <template #header>
                     <div class="horizontal-collapse__inactive-content">
@@ -51,9 +53,16 @@ defineProps({
                     <div class="horizontal-collapse__active-content" :style="`max-height:${defaultHeight}`">
                         <h3 class="horizontal-collapse__heading">{{ item.body.activeTitle }}</h3>
                         <p class="horizontal-collapse__body" v-html="item.body.description"></p>
-                        <a :href="item.body.link?.url" v-if="item.body.link?.el === 'href'">{{ item.body.link?.text }}</a>
+                        <a :href="item.body.link?.url" v-if="item.body.link?.el === 'href'">{{ item.body.link?.text
+                        }}</a>
                         <router-link :to="item.body.link?.url" v-if="item.body.link?.el === 'router-link'">{{
                             item.body.link?.text }}</router-link>
+                    </div>
+                </template>
+                <template #component>
+                    <div class="horizontal-collapse__active-content" :style="`max-height:${defaultHeight}`">
+                        <h3 class="horizontal-collapse__heading">{{ item.body.activeTitle }}</h3>
+                        <p class="horizontal-collapse__body"><component :is="item.body.description"></component></p>
                     </div>
                 </template>
             </HorizontalCollapseItem>
