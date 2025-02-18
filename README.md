@@ -13,7 +13,7 @@
 
 * defaultHeight: **String | optional** => _default: ```16rem```_
 
-* activeIndex: **String/Boolean | optional** => _set active tab for first load, default: ```false```_ 
+* activeIndex: **String/Boolean | optional** => _set active tab for first load, default: ```false```_
 
 * itemSpan: **Number | optional** => _span active tab for ```itemSpan``` count, default: ```0```_
 
@@ -27,6 +27,7 @@
 
 <script setup>
 import HorizontalCollapse from 'vue3horizontalcollapse';
+import HelloWorld from './components/HelloWorld.vue';
 import 'vue3horizontalcollapse/dist/style.css'
 defineProps({
   items: {
@@ -79,25 +80,14 @@ defineProps({
         }
       },
       {
-        title: "Delete",
-        bgColor: '#8a8989',
-        body: {
-          activeTitle: "Delete active",
-          description: `<b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-                            modi laudantium facere aut, nemo praesentium, labore doloremque,
-                            porro ipsam qui nihil animi ea maiores. Ut excepturi quae veritatis.
-                            Recusandae, cupiditate? Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Voluptates modi laudantium facere aut, nemo
-                            praesentium, labore doloremque, porro ipsam qui nihil animi ea
-                            maiores. Ut excepturi quae veritatis. Recusandae, cupiditate?
-                            </b>`,
-          link: {
-            el: 'router-link',
-            url: '/path/subpath',
-            text: 'Click here'
-          }
-        }
-      }
+              title: "Delete",
+              bgColor: '#8a8989',
+              bodyType: "component",
+              body: {
+                activeTitle: "Delete active",
+                description: HelloWorld
+              },
+            }
     ]
   }
 })
@@ -112,9 +102,7 @@ defineProps({
 
 - [@sejanH](https://www.github.com/sejanH)
 
-
 ## Acknowledgements
 
  - [Inspired from](https://codepen.io/adrianparr/pen/ywKRPg)  -- Idea and some css were taken
  - [Readme.so](https://readme.so/) -- to write this readme
-
