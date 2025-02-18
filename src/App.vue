@@ -10,6 +10,7 @@ interface ItemType {
 <script setup lang="ts">
 import HorizontalCollapseMain from '../lib/components/Main.vue';
 import HorizontalCollapseItemComponent from '../lib/components/ComponentItem.vue';
+import { RouterLink, RouterView } from 'vue-router';
 defineProps({
   items: {
     type: Array<ItemType>,
@@ -28,8 +29,8 @@ defineProps({
                             praesentium, labore doloremque, porro ipsam qui nihil animi ea
                             maiores. Ut excepturi quae veritatis. Recusandae, cupiditate?`,
           link: {
-            el: 'href',
-            url: '/dashboard/media',
+            el: 'router-link',
+            url: '/dfg',
             text: 'Click here'
           }
         }
@@ -84,7 +85,8 @@ defineProps({
 </script>
 
 <template>
+<router-view></router-view>
   <HorizontalCollapseMain :items="items" :defaultHeight="defaultHeight" :activeIndex="activeIndex" :itemSpan="itemSpan"
-    :itemMinWidth="itemMinWidth" :itemMaxWidth="itemMaxWidth">
+    :itemMinWidth="itemMinWidth" :itemMaxWidth="itemMaxWidth" :routerLink="RouterLink">
   </HorizontalCollapseMain>
 </template>

@@ -1,7 +1,8 @@
 
 <script lang="ts">
+import { RouterLink } from 'vue-router';
 export default {
-    name: 'HorizontalCollapseItemComponent',
+    name: 'HorizontalCollapseItemComponent'
 }
 </script>
 <template>
@@ -14,6 +15,6 @@ export default {
         praesentium, labore doloremque, porro ipsam qui nihil animi ea
         maiores. Ut excepturi quae veritatis. Recusandae, cupiditate?
         <br/>
-        <router-link to="/fdfd"> TEST</router-link>
+        <component is="RouterLink" to="/">About</component>
     </div>
 </template>
